@@ -7,14 +7,14 @@ import lombok.Data;
 @Data
 @Builder
 public class ProductDto {
-    private String id;
+    private int id;
     private String name;
     private String company;
     private String description;
     private int  price;
     private int durationInMonths;
 
-    public ProductDto(String id, String name, String company, String description, int price, int durationInMonths) {
+    public ProductDto(int id, String name, String company, String description, int price, int durationInMonths) {
         this.id = id;
         this.name = name;
         this.company = company;
@@ -26,7 +26,7 @@ public class ProductDto {
     public ProductDto() {
     }
 
-    public String getId(){
+    public int getId(){
         return id;
     }
     public String getName() {
