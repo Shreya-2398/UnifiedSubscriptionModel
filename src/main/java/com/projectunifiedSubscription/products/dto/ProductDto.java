@@ -12,15 +12,15 @@ public class ProductDto {
     private String company;
     private String description;
     private int  price;
-    private int durationInMonths;
+    private int timePeriod;
 
-    public ProductDto(int id, String name, String company, String description, int price, int durationInMonths) {
+    public ProductDto(int id, String name, String company, String description, int price, int timePeriod) {
         this.id = id;
         this.name = name;
         this.company = company;
         this.description = description;
         this.price = price;
-        this.durationInMonths = durationInMonths;
+        this.timePeriod = timePeriod;
     }
 
     public ProductDto() {
@@ -62,11 +62,11 @@ public class ProductDto {
     }
 
     public int getDurationInMonths() {
-        return durationInMonths;
+        return timePeriod;
     }
 
-    public void setDurationInMonths(int durationInMonths) {
-        this.durationInMonths = durationInMonths;
+    public void setDurationInMonths(int timePeriod) {
+        this.timePeriod = timePeriod;
     }
 
     @Override
@@ -76,7 +76,7 @@ public class ProductDto {
                 ", company='" + company + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
-                ", durationInMonths=" + durationInMonths +
+                ", timePeriod=" + timePeriod +
                 '}';
     }
 }

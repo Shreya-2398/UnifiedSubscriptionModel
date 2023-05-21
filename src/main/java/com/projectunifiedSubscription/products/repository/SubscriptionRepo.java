@@ -1,14 +1,16 @@
 package com.projectunifiedSubscription.products.repository;
 
-import com.projectunifiedSubscription.products.entity.SubscriptionPlan;
+import com.projectunifiedSubscription.products.dto.SubscriptionDto;
+import com.projectunifiedSubscription.products.entity.Subscription;
+import com.projectunifiedSubscription.products.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
-public interface SubscriptionRepo extends JpaRepository<SubscriptionPlan, Integer> {
+@Repository
+public interface SubscriptionRepo extends JpaRepository<Subscription, Long> {
 
-    Optional<SubscriptionPlan> findProductByName(String name);
-
-    Optional <SubscriptionPlan> findProductById(int id);
-
+    List<Subscription> findByUser(User user);
 }

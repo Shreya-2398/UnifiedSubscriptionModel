@@ -1,0 +1,32 @@
+
+APIs:
+1. Admin Authentication
+2. User Authentication
+3. Products
+    1. Add
+    2. Get ny id
+    3. Get all
+
+4. Subscription Plan
+    1. Add
+    2. Get by id
+    3. Get all
+    4. Update Plan Cost
+    5. Pause 
+
+5. Subscriptions
+    1. Add
+    2. Get Subscription of user
+
+
+
+
+
+
+API Life Cycle:
+1. Router
+2. Middleware
+3. Controller
+4. Service
+5. Controller
+6. Router

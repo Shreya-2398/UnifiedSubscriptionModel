@@ -3,7 +3,7 @@ package com.projectunifiedSubscription.products.entity;
 import lombok.Builder;
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Data
 @Builder
@@ -29,15 +29,15 @@ public class Product {
     private int price;
 
     @Column(nullable = false)
-    private int durationInMonths;
+    private int timePeriod;
 
-    public Product(int id, String name, String company, String description, int price, int durationInMonths) {
+    public Product(int id, String name, String company, String description, int price, int timePeriod) {
         this.id = id;
         this.name = name;
         this.company = company;
         this.description = description;
         this.price = price;
-        this.durationInMonths = durationInMonths;
+        this.timePeriod = timePeriod;
     }
 
     public Product() {
@@ -83,12 +83,12 @@ public class Product {
         this.price = price;
     }
 
-    public int getDurationInMonths() {
-        return durationInMonths;
+    public int getTimePeriod() {
+        return timePeriod;
     }
 
-    public void setDurationInMonths(int durationInMonths) {
-        this.durationInMonths = durationInMonths;
+    public void setTimePeriod(int timePeriod) {
+        this.timePeriod = timePeriod;
     }
 
     @Override
@@ -99,7 +99,7 @@ public class Product {
                 ", company='" + company + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
-                ", durationInMonths=" + durationInMonths +
+                ", timePeriod=" + timePeriod +
                 '}';
     }
 }
